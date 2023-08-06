@@ -1,0 +1,43 @@
+﻿CREATE TABLE ZEVEL.EVENTS_CREATION (
+  id_event INT64,
+  latitude FLOAT64,
+  longitude FLOAT64,
+  trash_type STRING,
+  trash_amount INT64,
+  id_reporter INT64,
+  time_of_creation TIMESTAMP,
+  description STRING
+);
+
+
+CREATE TABLE ZEVEL.REPORTER (
+  id_reporter INT,
+  name STRING,
+  organization STRING,
+  score FLOAT64,
+  score1 FLOAT64,
+  score2 FLOAT64
+);
+
+
+CREATE TABLE ZEVEL.RESPONSE_TO_EVENTS (
+  id_response INT64,
+  id_event INT64,
+  status INT64,
+  id_responder INT64
+);
+
+
+CREATE TABLE ZEVEL.TIMES_OF_RESPONSES (
+  id_response INT64,
+  status INT64,
+  timestamp TIMESTAMP
+);
+
+
+CREATE TABLE ZEVEL.RECYCLE_BINS (
+  id INT64,
+  latitude FLOAT64,
+  longitude FLOAT64,
+  type_string string
+);
