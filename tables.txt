@@ -7,6 +7,7 @@
   id_reporter INT64,
   time_of_creation TIMESTAMP,
   description STRING
+  image_64 STRING
 );
 
 
