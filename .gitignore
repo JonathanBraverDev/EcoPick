@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /trash-detector-backend/node_modules
+/trash-detector/node_modules
 
 # testing
 /coverage

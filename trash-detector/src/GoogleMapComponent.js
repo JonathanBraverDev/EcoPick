@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import { Popup } from "./components/Popup.js";
 const GoogleMapComponent = (props) => {
 
     // const pinBackground = new PinElement({
@@ -14,6 +15,7 @@ const GoogleMapComponent = (props) => {
         {lat:32.0853, lng:34.7918}
     ]
     let [markers, setMarkers] = useState(markersList);
+    let [popUpVisible, setPopUpVisible] = useState(false);
     const mapStyles = {
         width: '100%',
         height: '100%'
@@ -32,7 +34,7 @@ const GoogleMapComponent = (props) => {
             lat: val.lat,
             lng: val.lng
         }}
-            onClick={() => console.log("Clicked")}
+            onClick={() => setPopUpVisible(true)}
             draggable={false}
             onDragend={(t, map, coord) => onMarkerDragEnd(coord, key, markers)}
             onMouseover={() => console.log("hover")}
@@ -55,6 +57,12 @@ const GoogleMapComponent = (props) => {
                         }
                     >
                         {myMarkers}
+                    { popUpVisible &&  <Popup  
+                            // isOpen={popUpVisible}
+                            onClose={()=> {setPopUpVisible(false)}}
+                            title="Example Popup"
+                            content="This is a simple and pretty popup component." >
+                            </Popup> }
                     </Map>
                 </div>
             </div>
