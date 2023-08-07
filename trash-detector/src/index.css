@@ -42,7 +42,7 @@ width: 100%; */
   width: 33.3333vw;
   text-align: center;
   align-items: center;
-  display: grid;
+  display: flex;
   font-size: 17px;
 }
 
