@@ -8,10 +8,11 @@ export const Popup = ({ onClose, title, content }) => {
     <div className="popup-overlay">
       <div className="popup">
         <div className="popup-header">
-          <h2>{title}</h2>
-          <button className="popup-close-button" onClick={onClose}>
+        <button className="popup-close-button" onClick={onClose}>
             &times;
           </button>
+          <h2>{title}</h2>
+          <img src='trash.jpg' width='100' ></img>
         </div>
         <div className="popup-content">{content}</div>
       </div>

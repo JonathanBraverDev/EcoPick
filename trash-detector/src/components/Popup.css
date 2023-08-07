@@ -19,12 +19,12 @@
     width: 90%;
   }
   
-  .popup-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
   
   .popup-header h2 {
     margin: 0;
@@ -35,6 +35,8 @@
     background-color: transparent;
     font-size: 24px;
     cursor: pointer;
+    position: sticky;
+    align-self: baseline;
   }
   
   .popup-content {
