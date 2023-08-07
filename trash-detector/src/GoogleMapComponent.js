@@ -60,8 +60,8 @@ const GoogleMapComponent = (props) => {
                     { popUpVisible &&  <Popup  
                             // isOpen={popUpVisible}
                             onClose={()=> {setPopUpVisible(false)}}
-                            title="Example Popup"
-                            content="This is a simple and pretty popup component." >
+                            title="Puickup required"
+                            content="Description: bag of trash" >
                             </Popup> }
                     </Map>
                 </div>
